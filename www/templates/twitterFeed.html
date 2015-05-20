@@ -1,0 +1,17 @@
+<ion-view view-title="Twitter Feed">
+  <ion-content>
+
+    <div class="list">
+
+      <a class="item item-avatar" ng-repeat="tweet in tweets">
+        <img ng-src="{{ tweet.user.profile_image_url }}">
+        <h2>{{ tweet.user.name }}</h2>
+        <small>@{{ tweet.user.screen_name }}</small>
+        <small class="time"> {{ tweet.created_at | formatTwitterDate}}</small>
+        <p ng-bind-html="tweet.text | formatTwitterText"></p>
+      </a>
+
+    </div>
+
+  </ion-content>
+</ion-view>
