@@ -15,8 +15,19 @@ var consumerKey = "you Consumer Key (API Key) here";
 var consumerSecret = "you Consumer Secret (API Secret) here";
 ```
 
+**Update(0.0.2)**
+If you're using a newer version of Cordova (or the latest Ionic CLI) to develop your app you need to add Cordova whitelist plugin! Run the following in project's directory:
+```sh
+ionic plugin add cordova-plugin-whitelist
+```
+
 ## NOTE
 You wont be able to see the feed with ionic serve command, because of cross-origin resource sharing not being enabled in browser. Build on phone to see results.
+
+## UPDATES
+### Version 0.0.2 - June 2015
+* Bug fix : [#1](https://github.com/drrasic/ionic_twitter_feed/issues/1) getting http 404 errors in new version of cordova
+
 
 ## Twitters Application-only authentication?
 https://dev.twitter.com/oauth/application-only
@@ -39,7 +50,7 @@ And it won’t be able to:
   - Access DMs or account credentials;
 
 ### Demo version
-0.0.1
+0.0.2
 
 ### Tech
 * [Ionic] - Advanced HTML5 Hybrid Mobile App Framework
