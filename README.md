@@ -21,10 +21,19 @@ If you're using a newer version of Cordova (or the latest Ionic CLI) to develop 
 ionic plugin add cordova-plugin-whitelist
 ```
 
+**Update(0.0.3)**
+If you wont hyperlinks(hashtags, users, lists, links) to open in InnapBrowser when clicked you have to add this plugin :
+```sh
+cordova plugin add cordova-plugin-inappbrowser
+```
+
 ## NOTE
 You wont be able to see the feed with ionic serve command, because of cross-origin resource sharing not being enabled in browser. Build on phone to see results.
 
 ## UPDATES
+### Version 0.0.3 - August 2015
+* Enhancement : [#2](https://github.com/drrasic/ionic_twitter_feed/issues/2) Enabled opening Hyperlinks(hashtags, users, lists, links) in InnapBrowser.
+
 ### Version 0.0.2 - June 2015
 * Bug fix : [#1](https://github.com/drrasic/ionic_twitter_feed/issues/1) getting http 404 errors in new version of cordova
 
