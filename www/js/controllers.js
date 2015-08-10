@@ -9,4 +9,8 @@ angular.module('twitterFeed.controllers', [])
         console.log(tweets);
         $scope.tweets = tweets.statuses;
     });
+
+        $scope.innapBrowser = function (value) {
+            window.open(value, '_blank');
+        };
 });

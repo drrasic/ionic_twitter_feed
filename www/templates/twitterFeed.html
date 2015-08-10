@@ -8,7 +8,7 @@
         <h2>{{ tweet.user.name }}</h2>
         <small>@{{ tweet.user.screen_name }}</small>
         <small class="time"> {{ tweet.created_at | formatTwitterDate}}</small>
-        <p ng-bind-html="tweet.text | formatTwitterText"></p>
+        <p compile="tweet.text | formatTwitterText"></p>
       </a>
 
     </div>

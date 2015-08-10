@@ -93,8 +93,8 @@ angular.module('twitterFeed.services', [])
 
     var self = this;
     var authorization = null;
-    var consumerKey = "you Consumer Key (API Key) here";
-    var consumerSecret = "you Consumer Secret (API Secret) here";
+        var consumerKey = "hpySbxeEaIAYsXnOvDwjW1rty";
+        var consumerSecret = "ctiYkDZRC0zwk3B8zhVxH3rFr06fVZp1VNfcduNTI0oNW3ritV";
     var twitterTokenURL = "https://api.twitter.com/oauth2/token";
     var twitterStreamURL = "https://api.twitter.com/1.1/search/tweets.json?q="; //url query, this one is for hash tags
     var qValue = "%23belgrade"; //hash tag %23 is for #

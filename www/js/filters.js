@@ -57,22 +57,22 @@ angular.module('twitterFeed.filters', [])
             link: function (tweet) {
                 return tweet.replace(/\b(((https*\:\/\/)|www\.)[^\"\']+?)(([!?,.\)]+)?(\s|$))/g, function (link, m1, m2, m3, m4) {
                     var http = m2.match(/w/) ? 'http://' : '';
-                    return '<a class="twtr-hyperlink">' + ((m1.length > 25) ? m1.substr(0, 24) + '...' : m1) + '</a>' + m4;
+                    return '<a class="twtr-hyperlink" ng-click="innapBrowser(\'' + http + m1 + '\')">' + ((m1.length > 25) ? m1.substr(0, 24) + '...' : m1) + '</a>' + m4;
                 });
             },
             at: function (tweet) {
                 return tweet.replace(/\B[@＠]([a-zA-Z0-9_]{1,20})/g, function (m, username) {
-                    return '<a class="twtr-atreply">@' + username + '</a>';
+                    return '<a class="twtr-atreply" ng-click="innapBrowser(\'http://twitter.com/intent/user?screen_name=' + username + '\')">@' + username + '</a>';
                 });
             },
             list: function (tweet) {
                 return tweet.replace(/\B[@＠]([a-zA-Z0-9_]{1,20}\/\w+)/g, function (m, userlist) {
-                    return '<a class="twtr-atreply">@' + userlist + '</a>';
+                    return '<a class="twtr-atreply" ng-click="innapBrowser(\'http://twitter.com/' + userlist + '\')">@' + userlist + '</a>';
                 });
             },
             hash: function (tweet) {
                 return tweet.replace(/(^|\s+)#(\w+)/gi, function (m, before, hash) {
-                    return before + '<a class="twtr-hashtag">#' + hash + '</a>';
+                    return before + '<a target="_blank" class="twtr-hashtag" ng-click="innapBrowser(\'http://twitter.com/search?q=%23' + hash + '\')">#' + hash + '</a>';
                 });
             }
         }
